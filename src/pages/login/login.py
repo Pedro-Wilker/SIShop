@@ -1,4 +1,5 @@
 import customtkinter as ctk
+import database
 from tkinter import *
 
 window = ctk.CTk()
@@ -183,14 +184,13 @@ class Login():
                 height=40,
                 fg_color="green", 
                 hover_color="#2D9334", 
+                command=save_user
             ).place(x=110, y=480 )
             
             def back_lg():
                 frame_register.pack_forget()
                 frame_login.pack(side=RIGHT)
                 
-                    
-            
             btn_back = ctk.CTkButton(
                 master=frame_register,
                 text="VOLTAR", 
